@@ -102,7 +102,7 @@ Both sections auto-scale to fit your screen width. No pinching or zooming requir
 
 ### Installation
 
-1. Make sure your DoL has [ModLoader](https://github.com/AceDev98/ModLoader) v2.x installed
+1. Make sure your DoL has [ModLoader](https://github.com/Lyoko-Jeremie/sugarcube-2-ModLoader) v2.x installed
 2. Download [SidebarToBottom.mod.zip](https://github.com/midimao/dol-sidebar-to-bottom/releases/latest) from Releases
 3. Load the zip in ModLoader
 4. In-game: Options → General → Sidebar → check **"Move sidebar to page"**

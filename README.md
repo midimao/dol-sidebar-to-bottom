@@ -45,7 +45,7 @@ SidebarToBottom 将侧边栏拆分后嵌入游戏页面：
 
 ### 安装
 
-1. 确保你的 DoL 已安装 [ModLoader](https://github.com/AceDev98/ModLoader) v2.x
+1. 确保你的 DoL 已安装 [ModLoader](https://github.com/Lyoko-Jeremie/sugarcube-2-ModLoader.git)v2.x
 2. 下载 [SidebarToBottom.mod.zip](https://github.com/midimao/dol-sidebar-to-bottom/releases/latest)
 3. 在 ModLoader 中加载该 zip 文件
 4. 进入游戏 → Options → General → Sidebar 区块 → 勾选 **"Move sidebar to page / 将侧边栏移至页面"**

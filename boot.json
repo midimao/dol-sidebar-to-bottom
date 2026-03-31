@@ -1,0 +1,16 @@
+{
+  "name": "SidebarToBottom",
+  "version": "3.0.0",
+  "scriptFileList_inject_early": ["sidebar-to-bottom.js"],
+  "scriptFileList_earlyload": [],
+  "scriptFileList_preload": [],
+  "scriptFileList": [],
+  "styleFileList": ["sidebar-to-bottom.css"],
+  "tweeFileList": [],
+  "imgFileList": [],
+  "additionFile": [],
+  "additionBinaryFile": [],
+  "dependenceInfo": [
+    { "modName": "ModLoader", "version": "^2.0.0" }
+  ]
+}

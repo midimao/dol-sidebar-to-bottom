@@ -1,0 +1,190 @@
+/* ──────────────────────────────────────────
+   SidebarToBottom v3.0 — Mobile-Optimized Layout
+   Top: skybox + portrait + money/time (auto-scaled)
+   Bottom: stat text with colored bars + buttons (auto-scaled)
+   ────────────────────────────────────────── */
+
+/* ── Hide real sidebar ── */
+
+body.sidebar-at-bottom #ui-bar {
+	left: -100vw !important;
+	visibility: hidden !important;
+}
+
+body.sidebar-at-bottom #ui-bar-toggle {
+	display: none !important;
+}
+
+body.sidebar-at-bottom #story {
+	margin-left: 0 !important;
+}
+
+body.sidebar-at-bottom #passages {
+	padding-left: 0 !important;
+}
+
+body.sidebar-at-bottom #mobileStats {
+	display: none !important;
+}
+
+/* ── Pull history buttons out of hidden sidebar ── */
+
+body.sidebar-at-bottom #ui-bar-history {
+	position: fixed !important;
+	right: 0 !important;
+	top: 40px !important;
+	left: auto !important;
+	z-index: 500 !important;
+	visibility: visible !important;
+	padding-right: 1em;
+}
+
+/* ════════════════════════════════════════
+   TOP WRAPPER — skybox + portrait + money/time
+   ════════════════════════════════════════ */
+
+#sidebar-top-wrapper {
+	position: relative;
+	width: 280px;
+	margin: 0 0 0.8em 0;
+	overflow: visible;
+	border-radius: 4px;
+	border: 1px solid var(--750);
+	background: #000;
+}
+
+#sidebar-top-wrapper #sidebar-img-container {
+	position: relative;
+	width: 280px;
+	height: 192px;
+	overflow: hidden;
+}
+
+#sidebar-top-wrapper #characterTemperature {
+	position: absolute;
+	top: 159px;
+	left: 66px;
+	z-index: 1000;
+}
+
+#sidebar-top-wrapper #characterTemperatureTooltip {
+	position: absolute;
+	width: 16px;
+	height: 29px;
+	top: 157px;
+	left: 67px;
+	z-index: 1000;
+}
+
+/* Stats row (money/time/date) — under portrait */
+#sidebar-top-wrapper #stats {
+	position: relative;
+	width: 280px;
+	min-height: 2.5em;
+	cursor: pointer;
+	background: var(--850);
+	border-top: 1px solid var(--750);
+	padding: 6px 8px;
+	box-sizing: border-box;
+	font-size: 0.9em;
+	line-height: 1.5;
+	overflow: visible;
+	text-align: center;
+	height: auto;
+}
+
+/* ════════════════════════════════════════
+   BOTTOM WRAPPER — stat text + bars + buttons
+   ════════════════════════════════════════ */
+
+.sidebar-bottom-separator {
+	border: none;
+	border-top: 1px solid var(--750);
+	margin: 1.5em 0 0.5em;
+}
+
+#sidebar-bottom-wrapper {
+	position: relative;
+	width: 280px;
+	margin: 0;
+	background: var(--850);
+	border: 1px solid var(--750);
+	border-radius: 4px;
+	overflow: visible;
+}
+
+#sidebar-bottom-wrapper #storyCaptionDiv {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	width: 280px !important;
+	height: auto !important;
+}
+
+#sidebar-bottom-wrapper #storyCaptionContent {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	width: 280px !important;
+	height: auto !important;
+	max-height: none !important;
+	overflow-y: visible !important;
+	overflow-x: hidden !important;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+/* Stat meters — fix z-index so bars are visible outside sidebar */
+#sidebar-bottom-wrapper #statmeters {
+	position: relative;
+	width: 100% !important;
+	left: 0 !important;
+}
+
+#sidebar-bottom-wrapper .meter,
+#sidebar-bottom-wrapper .rightMeter {
+	z-index: 0 !important;
+}
+
+#sidebar-bottom-wrapper .redbar,
+#sidebar-bottom-wrapper .pinkbar,
+#sidebar-bottom-wrapper .purplebar,
+#sidebar-bottom-wrapper .bluebar,
+#sidebar-bottom-wrapper .lbluebar,
+#sidebar-bottom-wrapper .tealbar,
+#sidebar-bottom-wrapper .greenbar,
+#sidebar-bottom-wrapper .dangerbar,
+#sidebar-bottom-wrapper .meterMin {
+	z-index: 1 !important;
+}
+
+#sidebar-bottom-wrapper #overlayButtons {
+	position: relative;
+	width: 100%;
+	padding: 4px 0;
+}
+
+#sidebar-bottom-wrapper .error-reporter-btn {
+	position: absolute;
+	z-index: 999;
+	top: 4px;
+	right: 4px;
+}
+
+#sidebar-bottom-wrapper #debugWindow {
+	position: relative;
+}
+
+#sidebar-bottom-wrapper #startingPlayerImage {
+	display: none;
+}
+
+/* ── Mobile responsive ── */
+
+@media only screen and (max-width: 750px) {
+	#sidebar-top-wrapper,
+	#sidebar-bottom-wrapper {
+		width: 100%;
+		max-width: 280px;
+	}
+}
